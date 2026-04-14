@@ -25,20 +25,25 @@ body {
 }
 
         /* Header untuk 3 Logo */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo-container {
-            width: 100px; 
-            display: flex;
-            justify-content: center;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    
+    /* Efek Transparan Profesional (Glassmorphism) */
+    background-color: rgba(255, 255, 255, 0.7); /* Putih transparan */
+    backdrop-filter: blur(10px); /* Efek blur di belakang header */
+    -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
+    
+    /* Garis bawah halus */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Menjaga header tetap di atas saat di-scroll (opsional) */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
         header img {
             width: 80px; 
@@ -91,18 +96,19 @@ body {
         }
 
         /* Tombol Navigasi */
-        .nav-card {
-            width: 280px; /* Sedikit lebih lebar agar teks panjang muat */
-            padding: 40px 20px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid transparent;
-        }
+.nav-card {
+    width: 280px;
+    padding: 40px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9); /* Putih transparan agar background terlihat sedikit */
+    backdrop-filter: blur(5px); /* Efek blur kaca (opsional) */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Bayangan lebih tegas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+}
 
         .nav-card:hover {
             transform: translateY(-10px);
